@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+    <style>
+        body {
+            font-family: "微软雅黑", sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #121212;
+            color: #e0e0e0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        header {
+            background: linear-gradient(45deg, #ff0081, #00ff99);
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+            border-bottom: 2px solid #ff0081;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            mix-blend-mode: overlay;
+            z-index: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+        h1, h2, h3 {
+            color: #00ff99;
+            text-shadow: 0 0 5px rgba(0, 255, 153, 0.7);
+        }
+        .section {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            border: 1px solid #333;
+            border-radius: 8px;
+            background: rgba(50, 50, 50, 0.8);
+            box-shadow: 0 0 10px rgba(0, 255, 153, 0.3);
+        }
+        .section:hover {
+            box-shadow: 0 0 15px rgba(0, 255, 153, 0.5);
+            transition: box-shadow 0.3s ease;
+        }
+        .contact {
+            background: rgba(50, 50, 50, 0.8);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 255, 153, 0.3);
+        }
+        .contact a {
+            color: #00ff99;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        .neon-border {
+            border: 2px solid transparent;
+            background-image: linear-gradient(45deg, #ff0081, #00ff99);
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            border-radius: 8px;
+            padding: 1rem;
+        }
+        @keyframes neon {
+            0% { text-shadow: 0 0 5px rgba(0, 255, 153, 0.7); }
+            50% { text-shadow: 0 0 10px rgba(0, 255, 153, 0.7); }
+            100% { text-shadow: 0 0 5px rgba(0, 255, 153, 0.7); }
+        }
+        h1, h2 {
+            animation: neon 1.5s infinite alternate;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>彭银贵的个人主页</h1>
+    </header>
+    <div class="container">
+        <div class="section neon-border">
+            <h2>个人介绍</h2>
+            <p>大家好，我是彭银贵。欢迎访问我的个人主页！</p>
+        </div>
+
+        <div class="section neon-border">
+            <h2>教育背景</h2>
+            <p>初中毕业。</p>
+        </div>
+
+        <div class="section neon-border">
+            <h2>工作经历</h2>
+            <p>浑水摸鱼。</p>
+        </div>
+
+        <div class="section neon-border">
+            <h2>技能</h2>
+            <ul>
+                <li>摸鱼</li>
+                <li>睡觉</li>
+                <li>打游戏</li>
+            </ul>
+        </div>
+
+        <div class="contact">
+            <h2>联系方式</h2>
+            <p>微信: <a href="weixin://wxid/p2994189514g">p2994189514g</a></p>
+        </div>
+    </div>
+</body>
+</html>
